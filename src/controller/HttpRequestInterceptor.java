@@ -1,6 +1,10 @@
 package controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import manager.ApplicationSecurityManager;
+import model.User;
 
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 

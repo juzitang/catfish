@@ -6,12 +6,26 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
-		<attributes>
-			<attribute name="owner.project.facets" value="jst.web"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/tomcat-util.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/annotations-api.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/catalina.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/catalina-ant.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/catalina-ha.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/catalina-tribes.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/ecj-3.7.1.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/el-api.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/jasper.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/jasper-el.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/servlet-api.jar" sourcepath="G:/zlh/catfish/下载的文件/~servlet-api.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/tomcat-i18n-es.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/tomcat-i18n-fr.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry kind="lib" path="G:/zlh/catfish/apache-tomcat-7.0.25/lib/tomcat-jdbc.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

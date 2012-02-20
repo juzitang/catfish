@@ -42,6 +42,15 @@
 		</property>
 	</bean>
 	
+	<bean id="httpRequestInterceptor" class="controller.HttpRequestInterceptor">
+		<property name="applicationSecurityManger">
+			<ref bean="applicationSecurityManager"/>
+		</property>
+		<property name="loginPage">
+			<value>login.do</value>
+		</property>
+	</bean>
+	
 	<!-- =manager bean-->
 	<bean id="applicationSecurityManager" class="manager.ApplicationSecurityManager">
 	</bean>
