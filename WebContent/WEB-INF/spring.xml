@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+	"http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.JstlView</value>
+		</property>
+		<property name="prefix">
+			<value>/WEB-INF/jsp/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+	
+	<!-- controller bean -->
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="interceptors">
+			<list>
+                <ref bean="httpRequestInterceptor"/>
+            </list>
+			
+		</property>
+		<property name="mappings">
+			<props>
+				<prop key="/login.do">loginController</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="loginController" class="controller.LoginController">
+		<property name="formView">
+			<value>login</value>
+		</property>
+		<property name="successView">
+			<value>main</value>
+		</property>
+		<property name="applicationSecurityManager">
+			<ref bean="applicationSecurityManager"/>
+		</property>
+	</bean>
+	
+	<!-- =manager bean-->
+	<bean id="applicationSecurityManager" class="manager.ApplicationSecurityManager">
+	</bean>
+	<bean id="userManager" class="manager.UserManager">
+	</bean>
+	
+</beans>
