@@ -5,7 +5,6 @@ import manager.ApplicationSecurityManager;
 import org.springframework.web.servlet.mvc.SimpleFormController;
 
 public class LoginController extends SimpleFormController {
-	
 	private ApplicationSecurityManager applicationSecurityManager;
 
 	public ApplicationSecurityManager getApplicationSecurityManager() {
@@ -16,6 +15,8 @@ public class LoginController extends SimpleFormController {
 			ApplicationSecurityManager applicationSecurityManager) {
 		this.applicationSecurityManager = applicationSecurityManager;
 	}
+	
+	
 	
 	
 

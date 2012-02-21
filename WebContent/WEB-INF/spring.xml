@@ -15,22 +15,26 @@
 		</property>
 	</bean>
 	
+	<!-- =manager bean-->
+	<bean id="applicationSecurityManager" class="manager.ApplicationSecurityManager">
+	</bean>
+	<bean id="userManager" class="manager.UserManager">
+	</bean>
+	
 	<!-- controller bean -->
-	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="interceptors">
-			<list>
-                <ref bean="httpRequestInterceptor"/>
-            </list>
-			
+	<bean id="httpRequestInterceptor" class="controller.HttpRequestInterceptor">
+		<property name="applicationSecurityManger">
+			<ref bean="applicationSecurityManager"/>
 		</property>
-		<property name="mappings">
-			<props>
-				<prop key="/login.do">loginController</prop>
-			</props>
+		<property name="loginPage">
+			<value>login.do</value>
 		</property>
 	</bean>
 	
 	<bean id="loginController" class="controller.LoginController">
+		<property name="commandClass">
+			<value>model.User</value>
+		</property>
 		<property name="formView">
 			<value>login</value>
 		</property>
@@ -42,19 +46,18 @@
 		</property>
 	</bean>
 	
-	<bean id="httpRequestInterceptor" class="controller.HttpRequestInterceptor">
-		<property name="applicationSecurityManger">
-			<ref bean="applicationSecurityManager"/>
-		</property>
-		<property name="loginPage">
-			<value>login.do</value>
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/login.do">loginController</prop>
+			</props>
 		</property>
 	</bean>
 	
-	<!-- =manager bean-->
-	<bean id="applicationSecurityManager" class="manager.ApplicationSecurityManager">
-	</bean>
-	<bean id="userManager" class="manager.UserManager">
-	</bean>
+	
+	
+	
+	
+	
 	
 </beans>
