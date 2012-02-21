@@ -2,6 +2,7 @@ package controller;
 
 import manager.ApplicationSecurityManager;
 
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.SimpleFormController;
 
 public class LoginController extends SimpleFormController {
@@ -14,6 +15,11 @@ public class LoginController extends SimpleFormController {
 	public void setApplicationSecurityManager(
 			ApplicationSecurityManager applicationSecurityManager) {
 		this.applicationSecurityManager = applicationSecurityManager;
+	}
+	 protected ModelAndView onSubmit(Object command)
+			    throws Exception
+	{
+		 return new ModelAndView(getSuccessView());
 	}
 	
 	
