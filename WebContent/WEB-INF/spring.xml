@@ -15,18 +15,49 @@
 		</property>
 	</bean>
 	
-	<bean id="test" class="test.test">
+	<!-- =manager bean-->
+	<bean id="applicationSecurityManager" class="manager.ApplicationSecurityManager">
+	</bean>
+	<bean id="userManager" class="manager.UserManager">
+	</bean>
+	
+	<!-- controller bean -->
+	<bean id="httpRequestInterceptor" class="controller.HttpRequestInterceptor">
+		<property name="applicationSecurityManger">
+			<ref bean="applicationSecurityManager"/>
+		</property>
+		<property name="loginPage">
+			<value>login.do</value>
+		</property>
+	</bean>
+	
+	<bean id="loginController" class="controller.LoginController">
+		<property name="commandClass">
+			<value>model.User</value>
+		</property>
 		<property name="formView">
-			<value>testPage</value>
+			<value>login</value>
+		</property>
+		<property name="successView">
+			<value>main</value>
+		</property>
+		<property name="applicationSecurityManager">
+			<ref bean="applicationSecurityManager"/>
 		</property>
 	</bean>
 	
 	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<property name="mappings">
 			<props>
-				<prop key="/test.action">test</prop>
+				<prop key="/login.do">loginController</prop>
 			</props>
 		</property>
 	</bean>
+	
+	
+	
+	
+	
+	
 	
 </beans>
