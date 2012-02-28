@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="UserFavorite" table="userFavorite">
+		<id name="id" column="userFavoriteID" type="java.lang.Long">
+			<generator class="identity" />
+		</id>
+		<many-to-one name="user" class="User" column="userID"
+			not-null="true" />
+		<many-to-one name="category" class="Category" column="categoryID"
+			not-null="true" />
+	</class>
+</hibernate-mapping>

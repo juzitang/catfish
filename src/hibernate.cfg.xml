@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3306/catfishtest
+		</property>
+		
+		<property name="hibernate.connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		
+		<property name="hibernate.connection.username">root</property>
+		
+		<property name="hibernate.connection.password">rxr-6283208</property>
+		
+		<!-- SQL dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		
+		<!-- Echo all executed SQL to stdout -->
+		<property name="hibernate.show_sql">True</property>
+		
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+		
+		<!-- 映射文件配置，注意配置文件名必须包含其相对于根的全路径 -->
+		<mapping resource="domain/Admin.hbm.xml" />
+		<mapping resource="domain/BrowserHistory.hbm.xml" />
+		<mapping resource="domain/Category.hbm.xml" />
+		<mapping resource="domain/PageInfo.hbm.xml" />
+		<mapping resource="domain/User.hbm.xml" />
+		<mapping resource="domain/UserFavorite.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

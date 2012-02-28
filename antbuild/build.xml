@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="GBK"?>
+<project name="HibernateOrmTest" default="schemaexport" basedir=".">
+	<property file="build.properties" />
+	<property name="controller.dir" value="**/" />
+	<property name="web.conf.dir" value="${web.dir}/WEB-INF" />
+	<property name="build.classes.dir" value="${classes.dir}"></property>
+
+
+	<path id="class.path">
+		<fileset dir="../lib">
+			<include name="*.jar"/>
+			<exclude name="log4j*.jar"/>
+		</fileset>
+	</path>
+
+	<target name="schemaexport">
+		<taskdef name="schemaexport" classname="org.hibernate.tool.hbm2ddl.SchemaExportTask" classpathref="class.path" />
+		<schemaexport properties="hibernate.properties" quiet="no" text="yes" drop="no" delimiter=";" output="schema-export.sql">
+			<fileset dir="../src">
+				<include name="**/*.hbm.xml" />
+			</fileset>
+		</schemaexport>
+	</target>
+	<target name="schemaupdate">
+		<taskdef name="schemaupdate" classname="org.hibernate.tool.hbm2ddl.SchemaUpdateTask" classpathref="class.path" />
+		<schemaupdate properties="hibernate.properties" quiet="no" text="yes" >
+			<fileset dir="../src">
+				<include name="**/*.hbm.xml" />
+			</fileset>
+		</schemaupdate>
+	</target>
+
+
+
+</project>

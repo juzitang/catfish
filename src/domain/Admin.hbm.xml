@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="Admin" table="admin">
+		<id name="id" column="adminID" type="java.lang.Long" >
+			<generator class="identity"/>
+		</id>
+		<property name="loginName" column="loginName" type="string"
+			length="50" not-null="true" unique-key="uniqueKey"/>
+		<property name="plainPassword" column="plainPassword" type="string"
+			length="32" />
+		<property name="encrytedPassword" column="encrytedPassword" type="string"
+			length="255" />
+		<property name="name" column="name" type="string"
+			length="64" not-null="true"/>
+		<property name="email" column="email" type="string"
+			length="100" />
+	</class>
+</hibernate-mapping>

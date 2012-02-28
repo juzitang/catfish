@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+	<class name="PageInfo" table="pageInfo">
+		<id name="id" column="pageID" type="java.lang.Long">
+			<generator class="identity" />
+		</id>
+		<property name="url" column="url" type="string" length="255"
+			not-null="true" unique-key="uniqueKey" />
+		<property name="pageType" column="pageType" type="boolean" not-null="true" />
+		<property name="title" column="title" type="string" length="255"
+			not-null="true" />
+		<many-to-one name="category" class="Category" column="categoryID"
+			not-null="false" />
+		<property name="content" column="content" type="text"
+			not-null="true" />
+	</class>
+</hibernate-mapping>
