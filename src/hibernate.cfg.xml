@@ -14,7 +14,7 @@
 		
 		<property name="hibernate.connection.username">root</property>
 		
-		<property name="hibernate.connection.password">rxr-6283208</property>
+		<property name="hibernate.connection.password">123456</property>
 		
 		<!-- SQL dialect -->
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
@@ -33,7 +33,7 @@
 			org.hibernate.transaction.JDBCTransactionFactory
 		</property>
 		
-		<!-- 映射文件配置，注意配置文件名必须包含其相对于根的全路�?-->
+		<!-- 映射文件配置，注意配置文件名必须包含其相对于根的全路�?-->
 		<mapping resource="domain/Admin.hbm.xml" />
 		<mapping resource="domain/BrowserHistory.hbm.xml" />
 		<mapping resource="domain/Category.hbm.xml" />

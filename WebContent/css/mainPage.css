@@ -1,0 +1,161 @@
+body { 
+	background: none repeat scroll 0 0 #6DA627;
+	font: 12px 'Lucida Grande',lucida,helvetica,arial,sans-serif;  
+	color: #333333;  
+	padding: 0px;  
+	margin: 0 auto;  
+	font-family: 'Museo_Slab',Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+#wrapper{
+	background: url("../image/wrapper-bg.gif") repeat-x left bottom #3EC6E0;
+}
+#footer{
+	background: url("../image/footer-bg.gif") repeat-x scroll;
+}
+#header {
+    height: 130px;
+    margin: auto;
+    width: 900px;
+}
+#header .floatLeft {
+    padding-left: 18px;
+    padding-top: 38px;
+}
+.floatLeft {
+    float: left;
+}
+#header .floatLeft h1.logo {
+    display: block;
+    height: 51px;
+    width: 198px;
+}
+#header .floatRight {
+    padding-right: 18px;
+    padding-top: 47px;
+    white-space: nowrap;
+}
+.floatRight {
+    float: right;
+}
+#header .floatRight li {
+    display: inline;
+}
+#header .floatRight li a.Sel {
+    border-bottom: 1px solid #D8ED92;
+}
+#header .floatRight li a {
+    color: #004C79;
+    display: block;
+    float: left;
+    font-size: 18px;
+    line-height: 33px;
+    margin-right: 35px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #9EEDFB;
+    white-space: nowrap;
+}
+a {
+    color: #004B78;
+    text-decoration: none;
+}
+#header .floatRight li a.last {
+    margin-right: 0;
+}
+.clear {
+    clear: both;
+    display: block;
+}
+#content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 4px solid #C7C2AC;
+    margin: auto;
+    position: relative;
+    width: 900px;
+}
+#content .sideBlueAreaHome {
+    background: url("../image/bluebox-bg.gif") repeat-y scroll left top #09649B;
+    color: #FFFFFF;
+    height: 328px;
+    left: 650px;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    text-shadow: 1px 1px 1px #012D48;
+    top: 16px;
+    width: 225px;
+}
+#content .sideBlueAreaHome h3 {
+    border-bottom: 1px dashed #308AC0;
+    color: #A3EEF3;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 24px;
+    margin-bottom: 16px;
+    padding-bottom: 6px;
+}
+#content .sideBlueAreaHome li {
+    display: block;
+    font-size: 13px;
+    line-height: 19px;
+    list-style-type: none;
+    padding-bottom: 18px;
+    padding-left: 5px;
+    width: 192px;
+}
+#content .blueHolder {
+    background: url("../image/blue-holder.png") no-repeat scroll left top transparent;
+    height: 14px;
+    left: 900px;
+    position: absolute;
+    top: 384px;
+    width: 14px;
+}
+#content .inside {
+    padding: 20px;
+}
+#content .slideHolder {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 360px;
+    width: 630px;
+}
+#container {
+    font-size: 18px;
+    height: 360px;
+    outline: 0 none;
+    overflow: hidden;
+    text-align: center;
+    width: 630px;
+}
+#page_content {
+    height: 360px;
+    position: relative;
+}
+
+#footer .holder {
+	background: url("../image/footer-holder-bg.gif") no-repeat scroll;
+    color: #FFFFFF;
+    padding-bottom: 40px;
+    padding-top: 108px;
+    text-shadow: 1px 1px 1px #475B06;
+}
+.holder {
+    margin: auto;
+    width: 930px;
+}
+#footer .floatLeft {
+    padding-left: 34px;
+    width: 345px;
+}
+#footer .floatLeft .inside {
+	padding-top: 40px;
+    width: 345px;
+}
+#footer .floatRight {
+    padding-right: 30px;
+    padding-top: 80px;
+    text-align: right;
+    width: 350px;
+}
+
+

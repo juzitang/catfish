@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="<%=request.getContextPath()%>/css/login.css" type="text/css" rel="stylesheet">
-<title></title>
+<title>Login</title>
 </head>
 <body id="login">
 		<div id="wrappertop"></div>

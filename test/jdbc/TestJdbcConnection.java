@@ -11,7 +11,7 @@ public class TestJdbcConnection {
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection(
 				"jdbc:mysql://localhost:3306/catfishtest", "root",
-				"rxr-6283208");
+				"123456");
 		PreparedStatement st = conn
 				.prepareStatement("select adminID,loginName,name from admin");
 		ResultSet rs = st.executeQuery();
