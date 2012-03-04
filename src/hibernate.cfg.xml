@@ -25,7 +25,15 @@
 		<!-- Enable Hibernate's automatic session context management -->
 		<property name="current_session_context_class">thread</property>
 		
-		<!-- 映射文件配置，注意配置文件名必须包含其相对于根的全路径 -->
+		<!-- Batch processing size -->
+		<property name="hibernate.jdbc.batch_size">10</property>
+		
+		<!-- Physical Transactions JDBC -->
+		<property name="hibernate.transaction.factory_class">
+			org.hibernate.transaction.JDBCTransactionFactory
+		</property>
+		
+		<!-- 映射文件配置，注意配置文件名必须包含其相对于根的全路�?-->
 		<mapping resource="domain/Admin.hbm.xml" />
 		<mapping resource="domain/BrowserHistory.hbm.xml" />
 		<mapping resource="domain/Category.hbm.xml" />
