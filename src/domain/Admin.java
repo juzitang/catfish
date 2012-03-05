@@ -4,6 +4,11 @@ import domain.base.DomainObj;
 
 public class Admin extends DomainObj{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2504378827402424875L;
+
 	private String loginName;
 	
 	private String plainPassword;

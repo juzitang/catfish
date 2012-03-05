@@ -1,6 +1,13 @@
 package domain.base;
 
-public class DomainObj {
+import java.io.Serializable;
+
+public class DomainObj implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5936410245992031286L;
 
 	protected long id;
 

@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
-import dao.BaseDao;
-import domain.base.DomainObj;
+import dao.AdminDao;
+import domain.Admin;
 
 public class DaoDITest {
 
@@ -13,12 +13,21 @@ public class DaoDITest {
 		FileSystemXmlApplicationContext fileSystemXmlApplicationContext = new FileSystemXmlApplicationContext(
 				new String[] {"WebContent/WEB-INF/spring.xml", "WebContent/WEB-INF/database.xml", "WebContent/WEB-INF/dao.xml"});
 		
-		BaseDao baseDao = (BaseDao)fileSystemXmlApplicationContext.getBean("baseDao");
+		AdminDao adminDao = (AdminDao)fileSystemXmlApplicationContext.getBean("adminDao");
 		
-		List<DomainObj> admins = baseDao.find("from Admin as domain ");
+		List<Admin> admins = adminDao.find("from Admin as domain ");
 		
-		for(DomainObj domainObj : admins){
+		for(Admin domainObj : admins){
+			System.out.println("-----------------------");
 			System.out.println("Admin id is " + domainObj.getId());
+			System.out.println("Admin name is " + domainObj.getName());
+			System.out.println("Admin login name is " + domainObj.getLoginName());
 		}
+		
+		Admin adminById = adminDao.getAdminById(1L);
+		System.out.println("Admin's name is " + adminById.getName());
+		
+		adminById = adminDao.getAdminByLoginName("loginName29");
+		System.out.println("Admin's name is " + adminById.getName());
 	}
 }
