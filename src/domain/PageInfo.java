@@ -5,6 +5,8 @@ import domain.base.PageType;
 
 public class PageInfo extends DomainObj {
 
+	private static final long serialVersionUID = -8859665610603484264L;
+
 	private String url;
 	
 	private PageType pageType;

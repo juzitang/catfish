@@ -6,6 +6,8 @@ import domain.base.DomainObj;
 
 public class BrowserHistory extends DomainObj {
 
+	private static final long serialVersionUID = -8650410999671950946L;
+
 	private User user;
 	
 	private PageInfo page;

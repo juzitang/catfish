@@ -22,11 +22,11 @@
 						<fieldset class="form">
                         	                                                                                       <p>
 								<label for="user_name">Username:</label>
-								<input name="user_name" id="user_name" type="text" value="" />
+								<input name="loginName" id="user_name" type="text" value="" />
 							</p>
 							<p>
 								<label for="user_password">Password:</label>
-								<input name="user_password" id="user_password" type="password" />
+								<input name="plainPassword" id="user_password" type="password" />
 							</p>
 							<button type="submit" class="positive" name="Submit">
 								<img src="<%=request.getContextPath()%>/image/key.png" alt="Announcement"/>Login</button>

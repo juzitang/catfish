@@ -6,7 +6,7 @@ import domain.User;
 
 public class UserDao extends BaseDao<User>{
 
-	public User getUserId(long id){
+	public User getUserById(long id){
 		return get(User.class, id);
 	}
 	
@@ -16,6 +16,5 @@ public class UserDao extends BaseDao<User>{
 			return null;
 		}
 		return userList.get(0);
-	}
-	
+	}	
 }

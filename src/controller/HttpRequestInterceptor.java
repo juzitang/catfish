@@ -4,9 +4,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import manager.ApplicationSecurityManager;
-import model.User;
 
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+import domain.User;
 
 public class HttpRequestInterceptor extends HandlerInterceptorAdapter {
 	

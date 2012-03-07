@@ -1,5 +1,25 @@
 package manager;
 
-public class UserManager {
+import dao.UserDao;
+import domain.User;
 
+public class UserManager {
+	private UserDao userDao;
+	
+	public UserDao getUserDao() {
+		return userDao;
+	}
+
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
+	}
+
+
+	public boolean userIsValidation(User userToBeChecked){
+		User userFromDB=userDao.getUserByLoginName(userToBeChecked.getLoginName());
+		if(userToBeChecked.getPlainPassword().equals(userFromDB.getPlainPassword())){
+			return true;
+		}
+		return false;
+	}
 }

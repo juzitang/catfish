@@ -4,6 +4,8 @@ import domain.base.DomainObj;
 
 public class Category extends DomainObj {
 
+	private static final long serialVersionUID = 6412866201306962299L;
+
 	private String name;
 	
 	private String description;

@@ -4,9 +4,6 @@ import domain.base.DomainObj;
 
 public class User extends DomainObj {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 4184402358375762929L;
 
 	private String loginName;

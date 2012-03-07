@@ -19,6 +19,9 @@
 	<bean id="applicationSecurityManager" class="manager.ApplicationSecurityManager">
 	</bean>
 	<bean id="userManager" class="manager.UserManager">
+		<property name="userDao">
+			<ref bean="userDao"/>
+		</property>
 	</bean>
 	
 	<!-- controller bean -->
@@ -33,13 +36,16 @@
 	
 	<bean id="loginController" class="controller.LoginController">
 		<property name="commandClass">
-			<value>model.User</value>
+			<value>domain.User</value>
 		</property>
 		<property name="formView">
 			<value>login</value>
 		</property>
 		<property name="successView">
 			<value>main</value>
+		</property>
+		<property name="errorView">
+			<value>error</value>
 		</property>
 		<property name="applicationSecurityManager">
 			<ref bean="applicationSecurityManager"/>

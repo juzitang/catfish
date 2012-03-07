@@ -2,7 +2,7 @@ package manager;
 
 import javax.servlet.http.HttpServletRequest;
 
-import model.User;
+import domain.User;
 
 
 public class ApplicationSecurityManager {
@@ -16,8 +16,8 @@ public class ApplicationSecurityManager {
 		}
 		return null;
 	}
-	public void saveUser(HttpServletRequest request){
-		
+	public void saveUser(HttpServletRequest request,User user){
+		request.getSession().setAttribute(USER,user);
 	}
 
 }
