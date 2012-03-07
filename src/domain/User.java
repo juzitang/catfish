@@ -4,16 +4,21 @@ import domain.base.DomainObj;
 
 public class User extends DomainObj {
 
-private String loginName;
-	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4184402358375762929L;
+
+	private String loginName;
+
 	private String plainPassword;
-	
+
 	private String encrytedPassword;
-	
+
 	private String name;
-	
+
 	private String email;
-	
+
 	private boolean push;
 
 	public String getLoginName() {

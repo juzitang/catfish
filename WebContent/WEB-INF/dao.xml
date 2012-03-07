@@ -10,4 +10,13 @@
 			<value>Admin</value>
 		</property>
 	</bean>
+	
+	<bean id="userDao" class="dao.UserDao">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<property name="domainName">
+			<value>User</value>
+		</property>
+	</bean>
 </beans>
