@@ -17,4 +17,5 @@ public class UserDao extends BaseDao<User>{
 		}
 		return userList.get(0);
 	}	
+	
 }

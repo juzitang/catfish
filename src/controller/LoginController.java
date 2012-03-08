@@ -1,7 +1,5 @@
 package controller;
 
-import java.net.BindException;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -43,15 +41,19 @@ public class LoginController extends SimpleFormController {
 		this.errorView = errorView;
 	}
 
-	protected ModelAndView onSubmit(HttpServletRequest request, HttpServletResponse response, Object command, BindException errors)
-			    throws Exception
-	{
+
+	@Override
+	protected ModelAndView onSubmit(HttpServletRequest request,
+			HttpServletResponse response, Object command,
+			org.springframework.validation.BindException errors)
+			throws Exception {
 		if(userManager.userIsValidation((User)command)){
 			applicationSecurityManager.saveUser(request, (User)command);
 			return new ModelAndView(getSuccessView());
 		}
 		return new ModelAndView(getErrorView());
 	}
+
 	
 	
 

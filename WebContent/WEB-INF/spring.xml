@@ -3,7 +3,8 @@
 	"http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans>
-	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass">
 			<value>org.springframework.web.servlet.view.JstlView</value>
 		</property>
@@ -14,29 +15,32 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
-	
-	<!-- =manager bean-->
+
+	<!-- =manager bean -->
 	<bean id="applicationSecurityManager" class="manager.ApplicationSecurityManager">
 	</bean>
 	<bean id="userManager" class="manager.UserManager">
 		<property name="userDao">
-			<ref bean="userDao"/>
+			<ref bean="userDao" />
 		</property>
 	</bean>
-	
+
 	<!-- controller bean -->
 	<bean id="httpRequestInterceptor" class="controller.HttpRequestInterceptor">
 		<property name="applicationSecurityManger">
-			<ref bean="applicationSecurityManager"/>
+			<ref bean="applicationSecurityManager" />
 		</property>
 		<property name="loginPage">
 			<value>login.do</value>
 		</property>
 	</bean>
-	
+
 	<bean id="loginController" class="controller.LoginController">
 		<property name="commandClass">
 			<value>domain.User</value>
+		</property>
+		<property name="commandName">
+			<value>loginVO</value>
 		</property>
 		<property name="formView">
 			<value>login</value>
@@ -48,22 +52,26 @@
 			<value>error</value>
 		</property>
 		<property name="applicationSecurityManager">
-			<ref bean="applicationSecurityManager"/>
+			<ref bean="applicationSecurityManager" />
+		</property>
+		<property name="userManager">
+			<ref bean="userManager" />
 		</property>
 	</bean>
-	
-	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+
+	<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<property name="mappings">
 			<props>
 				<prop key="/login.do">loginController</prop>
 			</props>
 		</property>
 	</bean>
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
 </beans>
